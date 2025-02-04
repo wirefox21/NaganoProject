@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.thymeleaf.org">
+  <head>
+     <title>Login</title>
+     <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1 th:each="dto : ${dtoList}">
+      <span th:text="${dto.username}"></span>
+    </h1>
+    <form th:action="@{/post}" method="post">
+      <label for="username">USERNAME : </label>
+      <input type="text" id="username" name="username">
+      <br>
+      <label for="username">PASSWORD : </label>
+      <input type="password" id="password" name="password">
+      <br>
+      <input type="submit" value="LOGIN">
+    </form>
+  </body>
+ 
+</html>
